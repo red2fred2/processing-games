@@ -1,25 +1,60 @@
+/*
+The Object class is a dynamic version
+of the Thing class
+*/
 public class Object extends Thing {
+  //variables
   
   private PVector velocity;
   private PVector acceleration;
   private float mass;
   
-  Object(PVector velocity, PVector acceleration, float mass) {
+  //////////////////////////////////////////////////
+  //constructors
+  
+  Object(PVector position, boolean[][] hitbox, PVector velocity, PVector acceleration, float mass) {
     
-    super(new PVector(), new boolean[1][1]);
+    super(position, hitbox);
     
-    
+    setVelocity(velocity);
+    setAcceleration(acceleration);
+    setMass(mass);
+  }
+  
+  //////////////////////////////////////////////////
+  //getters and setters
+  
+  private PVector getVelocity() {
+    return this.velocity;
+  }
+  
+  
+  private void setVelocity(PVector velocity) {
     this.velocity = velocity;
+  }
+  
+  private PVector getAcceleration() {
+    return this.acceleration;
+  }
+  
+  private void setAcceleration(PVector acceleration) {
     this.acceleration = acceleration;
+  }
+  
+  private float getMass() {
+    return this.mass;
+  }
+  
+  private void setMass(float mass) {
     this.mass = mass;
   }
   
-  public void force(PVector force) {
-    force.div(this.mass);
-    this.acceleration.add(force);
-  }
+  //////////////////////////////////////////////////
+  //implementing methods
   
-  public void timeStep(float time) {
+  public void update(float time) {
+    super.update(time);
+    
     PVector vel = this.acceleration.copy();
     vel.mult(time);
     this.velocity.add(vel);
@@ -28,4 +63,13 @@ public class Object extends Thing {
     pos.mult(time);
     getPosition().add(pos);
   }
+  
+  //////////////////////////////////////////////////
+  //methods
+  
+  public void force(PVector force) {
+    force.div(this.mass);
+    this.acceleration.add(force);
+  }
+  
 }

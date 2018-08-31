@@ -44,6 +44,19 @@ public class Thing implements Interface {
   //////////////////////////////////////////////////
   //methods
   
+  public boolean collidedWith(Interface thing) {
+    return false;
+  }
+  
+  public void draw() {
+    fill(getColor());
+    
+  }
+  
+  public void update(float time) {
+    
+  }
+  
   private void generateHitRadius(boolean[][] hitbox) {
     
     final int xLength = hitbox.length;
@@ -76,4 +89,5 @@ public class Thing implements Interface {
     
     setHitRadius(max);
   }
+  
 }

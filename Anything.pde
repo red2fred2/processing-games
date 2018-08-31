@@ -2,7 +2,7 @@
 The Anything interface is implemented by everything
 that is a physical object or is drawn or exerts a force.
 */
-public interface Anything {
+public abstract interface Anything {
   //getters and setters
   
   public PVector getPosition();

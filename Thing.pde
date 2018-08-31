@@ -1,4 +1,4 @@
-/*
+ /*
 The Thing class encompasses everything that is a
 physical object or is drawn or exerts a force.
 */

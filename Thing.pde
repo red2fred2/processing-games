@@ -1,4 +1,4 @@
-public class Thing implements Interface {
+public class Thing implements Anything {
   //////////////////////////////////////////////////
   //variables
   
@@ -44,7 +44,7 @@ public class Thing implements Interface {
   //////////////////////////////////////////////////
   //methods
   
-  public boolean collidedWith(Interface thing) {
+  public boolean collidedWith(Anything thing) {
     return false;
   }
   

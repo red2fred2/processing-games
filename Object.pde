@@ -72,4 +72,8 @@ public class Object extends Thing {
     this.acceleration.add(force);
   }
   
+  public void torque(int torque) {
+    //TODO figure out how the fuck this works
+  }
+  
 }

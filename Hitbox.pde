@@ -9,6 +9,6 @@ public abstract interface Hitbox {
   //////////////////////////////////////////////////
   //methods
   
-  public boolean isColliding(Hitbox hitbox);
+  public boolean isCollidingWith(Hitbox hitbox);
   
 }

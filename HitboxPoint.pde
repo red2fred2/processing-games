@@ -1,36 +1,11 @@
 /*
 A HitboxPoint describes a single point in a Thing's hitbox.
 */
-public class HitboxPoint {
-  //variables
+public abstract interface HitboxPoint {
   
-  private PVector position;
-  
-  //////////////////////////////////////////////////
-  //constructors
-  
-  HitboxPoint(PVector position) {
-    setPosition(position);
-  }
-  
-  //////////////////////////////////////////////////
-  //getters and setters
-  
-  public PVector getPosition() {
-    return this.position;
-  }
-  
-  protected void setPosition(PVector position) {
-    this.position = position;
-  }
-  
-  //////////////////////////////////////////////////
-  //methods
-  
-  //returns the opposing force as a vector
-  public PVector force(PVector force) {
-    //return normal force from unmovable object
-    return force;
-  }
+  public PVector getPosition();
+  public PVector force(PVector force);
+  public boolean isCollidingWith(CircleHitboxPoint that);
+  public boolean isCollidingWith(RectangleHitboxPoint that);
   
 }

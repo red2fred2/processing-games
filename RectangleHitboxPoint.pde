@@ -5,21 +5,15 @@ public class RectangleHitboxPoint implements HitboxPoint {
   //variables
   
   private PVector position;
-  private float leftDistance;
-  private float rightDistance;
-  private float upperDistance;
-  private float lowerDistance;
+  private PVector size;
   private float angle;
   
   //////////////////////////////////////////////////
   //constructors
   
-  RectangleHitboxPoint(PVector position, float leftDistance, float rightDistance, float upperDistance, float lowerDistance, float angle) {
+  RectangleHitboxPoint(PVector position, PVector size, float angle) {
     setPosition(position);
-    setLeftDistance(leftDistance);
-    setRightDistance(rightDistance);
-    setUpperDistance(upperDistance);
-    setLowerDistance(lowerDistance);
+    setSize(size);
     setAngle(angle);
   }
   
@@ -34,36 +28,12 @@ public class RectangleHitboxPoint implements HitboxPoint {
     this.position = position;
   }
   
-  public float getLeftDistance() {
-    return this.leftDistance;
+  public PVector getSize() {
+    return this.size;
   }
   
-  private void setLeftDistance(float leftDistance) {
-    this.leftDistance = leftDistance;
-  }
-  
-  public float getRightDistance() {
-    return this.rightDistance;
-  }
-  
-  private void setRightDistance(float rightDistance) {
-    this.rightDistance = rightDistance;
-  }
-  
-  public float getUpperDistance() {
-    return this.upperDistance;
-  }
-  
-  private void setUpperDistance(float upperDistance) {
-    this.upperDistance = upperDistance;
-  }
-  
-  public float getLowerDistance() {
-    return this.lowerDistance;
-  }
-  
-  private void setLowerDistance(float lowerDistance) {
-    this.lowerDistance = lowerDistance;
+  private void setSize(PVector size) {
+    this.size = size;
   }
   
   public float getAngle() {

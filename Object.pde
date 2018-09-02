@@ -5,8 +5,7 @@ of the Thing class
 public class Object extends Thing {
   //variables
   
-  private PVector velocity;
-  private PVector acceleration;
+  private PVector velocity, acceleration;
   private float mass;
   
   //////////////////////////////////////////////////

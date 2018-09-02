@@ -7,7 +7,7 @@ public class Thing implements Anything {
   
   private PVector position;
   private int angle;
-  private color color;
+  private color col;
   private boolean[][] hitbox;
   private float hitRadius;
   
@@ -42,11 +42,11 @@ public class Thing implements Anything {
   }
   
   private color getColor() {
-    return this.color;
+    return this.col;
   }
   
-  protected void setColor(color color) {
-    this.color = color;
+  protected void setColor(color col) {
+    this.col = col;
   }
   
   public boolean[][] getHitbox() {

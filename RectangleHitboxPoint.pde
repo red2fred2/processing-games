@@ -4,8 +4,7 @@ A HitboxPoint that acts like a rectangle
 public class RectangleHitboxPoint implements HitboxPoint {
   //variables
   
-  private PVector position;
-  private PVector size;
+  private PVector position, size;
   private float angle;
   
   //////////////////////////////////////////////////

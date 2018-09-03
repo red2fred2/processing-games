@@ -5,30 +5,47 @@ in the game, and makes it run properly
 public class Game {
   //variables
   
-  public float startTime, currentTime;
+  private float startTime, lastTime, currentTime, loopTime;
   
   //////////////////////////////////////////////////
   //constructors
   
   Game() {
-    setOptions();
     startGame();
   }
   
   //////////////////////////////////////////////////
   //getters and setters
   
+  public float getStartTime() {
+    return this.startTime;
+  }
   
+  private void setStartTime() {
+    this.startTime = getCurrentTime();
+  }
+  
+  public float getLastTime() {
+    return this.lastTime;
+  }
+  
+  private void setLastTime() {
+    this.lastTime = getCurrentTime();
+  }
+  
+  public float getCurrentTime() {
+    return this.currentTime;
+  }
+  
+  private void setCurrentTime() {
+    
+  }
   
   //////////////////////////////////////////////////
   //methods
   
-  private void setOptions() {
-    //TODO
-  }
-  
   public void startGame() {
-    //TODO
+    setStartTime();
   }
   
   public void endGame() {
@@ -41,7 +58,9 @@ public class Game {
   }
   
   public void update() {
-    //TODO
+    setLastTime();
+    setCurrentTime();
+    
   }
   
 }

@@ -22,7 +22,11 @@ public class Game {
   }
   
   private void setStartTime() {
-    this.startTime = getCurrentTime();
+    setStartTime(getCurrentTime());
+  }
+  
+  private void setStartTime(float startTime) {
+    this.startTime = startTime;
   }
   
   public float getLastTime() {
@@ -30,7 +34,11 @@ public class Game {
   }
   
   private void setLastTime() {
-    this.lastTime = getCurrentTime();
+    setLastTime(getCurrentTime());
+  }
+  
+  private void setLastTime(float lastTime) {
+    this.lastTime = lastTime;
   }
   
   public float getCurrentTime() {
@@ -38,14 +46,27 @@ public class Game {
   }
   
   private void setCurrentTime() {
-    
+    this.currentTime = millis() / 1000;
+  }
+  
+  public float getLoopTime() {
+    return this.loopTime;
+  }
+  
+  private void setLoopTime() {
+    this.loopTime = getCurrentTime() - getLastTime();
   }
   
   //////////////////////////////////////////////////
   //methods
   
   public void startGame() {
+    setCurrentTime();
     setStartTime();
+    setLastTime();
+    
+    setCurrentTime();
+    setLoopTime();
   }
   
   public void endGame() {
@@ -60,7 +81,18 @@ public class Game {
   public void update() {
     setLastTime();
     setCurrentTime();
+    setLoopTime();
     
+    doCollisions();
+    updatePhysics();
+  }
+  
+  public void doCollisions() {
+    //TODO this
+  }
+  
+  public void updatePhysics() {
+    //TODO this
   }
   
 }

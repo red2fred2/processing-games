@@ -55,4 +55,17 @@ public class CircleHitboxPoint implements HitboxPoint {
     return false; //TODO this
   }
   
+  public float getMaxDistanceFromCenter() {
+    return getPosition().mag() + getRadius();
+  }
+  
+  public void drawHitbox() {
+    ellipse(
+      getPosition().x - getRadius(),
+      getPosition().y - getRadius(),
+      getPosition().x + getRadius(),
+      getPosition().y + getRadius()
+    );
+  }
+  
 }

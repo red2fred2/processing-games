@@ -7,5 +7,7 @@ public abstract interface HitboxPoint {
   public PVector force(PVector force);
   public boolean isCollidingWith(CircleHitboxPoint that);
   public boolean isCollidingWith(RectangleHitboxPoint that);
+  public float getMaxDistanceFromCenter();
+  public void drawHitbox();
   
 }

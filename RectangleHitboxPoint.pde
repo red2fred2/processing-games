@@ -60,4 +60,13 @@ public class RectangleHitboxPoint implements HitboxPoint {
     return false; //TODO this
   }
   
+  public float getMaxDistanceFromCenter() {
+    return 0;
+    //TODO this shit
+  }
+  
+  public void drawHitbox() {
+    //TODO figure this out
+  }
+  
 }

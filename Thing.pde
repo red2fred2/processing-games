@@ -8,13 +8,13 @@ public class Thing implements Anything {
   private PVector position;
   private int angle, index;
   private color col;
-  private boolean[][] hitbox;
+  private Hitbox hitbox;
   private float hitRadius;
   
   //////////////////////////////////////////////////
   //constructors
   
-  Thing(PVector position, boolean[][] hitbox) {
+  Thing(PVector position, Hitbox hitbox) {
     this.position = position; 
     setAngle(0);
     setColor(color(0));
@@ -49,11 +49,11 @@ public class Thing implements Anything {
     this.col = col;
   }
   
-  public boolean[][] getHitbox() {
+  public Hitbox getHitbox() {
     return this.hitbox;
   }
   
-  protected void setHitbox(boolean[][] hitbox) {
+  protected void setHitbox(Hitbox hitbox) {
     this.hitbox = hitbox;
     generateHitRadius(hitbox);
     
@@ -94,7 +94,13 @@ public class Thing implements Anything {
   //////////////////////////////////////////////////
   //methods
   
-  private void generateHitRadius(boolean[][] hitbox) {
+  private void generateHitRadius(Hitbox hitbox) {
+    
+    
+    
+    /*
+    
+    //code for the old boolean[][] hitbox
     
     final int xLength = hitbox.length;
     final int yLength = hitbox[0].length;
@@ -119,6 +125,7 @@ public class Thing implements Anything {
         }
         
       }
+      
     }
     
     //find max value
@@ -129,6 +136,10 @@ public class Thing implements Anything {
     }
     
     setHitRadius(max);
+    
+    */
+    
+    
   }
   
   protected void changeAngle(int n) {

@@ -11,7 +11,7 @@ public class Object extends Thing {
   //////////////////////////////////////////////////
   //constructors
   
-  Object(PVector position, boolean[][] hitbox, PVector velocity, PVector acceleration, float mass) {
+  Object(PVector position, Hitbox hitbox, PVector velocity, PVector acceleration, float mass) {
     
     super(position, hitbox);
     

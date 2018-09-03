@@ -6,7 +6,7 @@ public abstract interface Anything {
   //getters and setters
   
   public PVector getPosition();
-  public boolean[][] getHitbox();
+  public Hitbox getHitbox();
   public float getHitRadius();
   public int getAngle();
   public int getIndex();

@@ -89,7 +89,19 @@ public class Game {
   }
   
   public void doCollisions() {
-    //TODO this
+    final int length = stuff.size();
+    final int lminus1 = length - 1;
+
+    for(int i = 0; i < lminus1; i++) {
+      Anything thing1 = stuff.get(i);
+      
+      for(int j = i + 1; j < length; j++) {
+        Anything thing2 = stuff.get(j);
+        
+        thing1.doCollisions(thing2);
+        
+      }
+    }
   }
   
   public void updatePhysics() {

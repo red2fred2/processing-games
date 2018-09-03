@@ -6,7 +6,7 @@ public class Thing implements Anything {
   //variables
   
   private PVector position;
-  private int angle;
+  private int angle, index;
   private color col;
   private boolean[][] hitbox;
   private float hitRadius;
@@ -67,6 +67,14 @@ public class Thing implements Anything {
     this.hitRadius = hitRadius;
   }
   
+  public int getIndex() {
+    return this.index;
+  }
+  
+  public void setIndex(int index) {
+    this.index = index;
+  }
+
   //////////////////////////////////////////////////
   //implementing methods
   
@@ -79,7 +87,7 @@ public class Thing implements Anything {
     //TODO this
   }
   
-  public void update(float time) {
+  public void update(float loopTime) {
     //TODO this
   }
   

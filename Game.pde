@@ -6,6 +6,7 @@ public class Game {
   //variables
   
   private float startTime, lastTime, currentTime, loopTime;
+  private ArrayList<Anything> stuff; //this list that holds everything that has physics
   
   //////////////////////////////////////////////////
   //constructors
@@ -92,7 +93,20 @@ public class Game {
   }
   
   public void updatePhysics() {
-    //TODO this
+    for(Anything thing : stuff) {
+      final float time = getLoopTime();
+      thing.update(time);
+    }
+  }
+  
+  public void addThing(Anything thing) {
+    final int newIndex = stuff.size();
+    thing.setIndex(newIndex);
+    stuff.add(thing);
+  }
+  
+  public void removeThing(int index) {
+    stuff.remove(index);
   }
   
 }

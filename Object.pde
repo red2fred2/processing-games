@@ -51,15 +51,15 @@ public class Object extends Thing {
   //////////////////////////////////////////////////
   //implementing methods
   
-  public void update(float time) {
-    super.update(time);
+  public void update(float loopTime) {
+    super.update(loopTime);
     
     PVector vel = this.acceleration.copy();
-    vel.mult(time);
+    vel.mult(loopTime);
     this.velocity.add(vel);
     
     PVector pos = this.velocity.copy();
-    pos.mult(time);
+    pos.mult(loopTime);
     getPosition().add(pos);
   }
   

@@ -9,6 +9,8 @@ public abstract interface Anything {
   public boolean[][] getHitbox();
   public float getHitRadius();
   public int getAngle();
+  public int getIndex();
+  public int setIndex(int index);
   
   //////////////////////////////////////////////////
   //every loop in the main

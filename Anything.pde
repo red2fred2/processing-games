@@ -10,7 +10,7 @@ public abstract interface Anything {
   public float getHitRadius();
   public int getAngle();
   public int getIndex();
-  public int setIndex(int index);
+  public void setIndex(int index);
   
   //////////////////////////////////////////////////
   //every loop in the main
